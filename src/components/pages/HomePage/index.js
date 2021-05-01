@@ -2,18 +2,20 @@
 import React from 'react'
 
 import {
-  PageTemplate, Header, Hero, Footer, FeatureList,
+  LandingPageTemplate, Header, Footer,Content
 } from 'components'
+
+import {Course , Campus , Facility , Testimonial,ContactUs} from 'components'
 
 const HomePage = () => {
   return (
-    <PageTemplate
-      header={<Header />}
-      hero={<Hero />}
+    <LandingPageTemplate
+      header={<Header/>}
+      content={<Content  course={<Course/>} facility={<Facility/>} campus={<Campus/>} testimonial={<Testimonial/>} contactUs={<ContactUs/>} facility={<Facility/>}/>}
       footer={<Footer />}
     >
-      <FeatureList />
-    </PageTemplate>
+      
+    </LandingPageTemplate>
   )
 }
 

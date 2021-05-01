@@ -1,14 +1,14 @@
-// https://github.com/diegohaz/arc/wiki/Atomic-Design#templates
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { size } from 'styled-theme'
-import wave from '../../atoms/background/wave.svg'
+import PropTypes from 'prop-types'
+import {HorizontalRule} from 'components'
+
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 3.75rem;
+  //padding-top: 3.75rem;
   min-height: 100vh;
   box-sizing: border-box;
   @media screen and (max-width: 640px) {
@@ -16,43 +16,47 @@ const Wrapper = styled.div`
   }
 `
 const Header = styled.header`
-  position: fixed;
+ position: relative;
   top: 0;
   width: 100%;
-  z-index: 999;
+  //z-index: 0;/*999*/
 `
 
 const Content = styled.section`
   width: 100%;
   box-sizing: border-box;
   margin: 2rem auto;
-  max-width: ${size('maxWidth')};
+ // max-width: ${size('maxWidth')};
 `
 
 
 const Footer = styled.footer`
   margin-top: auto;
+ // z-index:999;
 `
 
-const LandingPageTemplate = ({header,content,footer, ...props }) => {
-  
-  return (
-            <Wrapper {...props}> 
+
+
+const LandingPageTemplate=({header,content,footer, ...props })=>{
+  return(
+        <Wrapper {...props}> 
               
-                        <Header>{header}</Header>
+                        <Header>
+                              {header}
+                              <HorizontalRule/>
+                        </Header>
                     
-                        <Content>{content}</Content>
+                        <Content>{content}</Content> 
                         
                         <Footer>{footer}</Footer>
-                
+                 
             </Wrapper>
-        )
+  )
 }
 
 LandingPageTemplate.propTypes = {
   header: PropTypes.node.isRequired,
   footer: PropTypes.node.isRequired,
-  content: PropTypes.any.isRequired 
+  //content: PropTypes.any.isRequired 
 }
-
-export default LandingPageTemplate
+export default LandingPageTemplate;

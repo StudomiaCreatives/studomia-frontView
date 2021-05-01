@@ -20,6 +20,7 @@ theme.palette = {
     '#eeeeee',
     '#ffffff',
   ],
+  footer:['#111111','#000111','#111000'],
 }
 
 theme.reversePalette = reversePalette(theme.palette)

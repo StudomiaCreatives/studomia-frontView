@@ -5,7 +5,7 @@ import { palette } from 'styled-theme'
 const HorizontalRule = styled.hr`
   border: 1px solid ${palette(1, true)};
   border-width: 0 0 1px;
-  width: 100%;
+  width: 60%;
 `
 
 HorizontalRule.propTypes = {
