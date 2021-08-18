@@ -19,25 +19,17 @@ const Wrapper = styled.div`
   }
 `
 
-const Field = ({
-  error, name, invalid, label, type, ...props
-}) => {
-  const inputProps = {
-    id: name, name, type, invalid, 'aria-describedby': `${name}Error`, ...props,
-  }
+const Field = ({ error, name, invalid, label, type, ...props}) => {
+  const inputProps = { id: name, name, type, invalid, 'aria-describedby': `${name}Error`, ...props,}
   const renderInputFirst = type === 'checkbox' || type === 'radio'
   return (
     <Wrapper>
+      
       {renderInputFirst && <Input {...inputProps} />}
-      {label && <Label htmlFor={inputProps.id}>{label}</Label>}
+      {label            && <Label htmlFor={inputProps.id}>{label}</Label>}
       {renderInputFirst || <Input {...inputProps} />}
-      {invalid && error
-        && (
-        <Error id={`${name}Error`} role="alert" palette="danger">
-          {error}
-        </Error>
-        )
-      }
+      {invalid          && error && (<Error id={`${name}Error`} role="alert" palette="danger">  {error} </Error>)}
+  
     </Wrapper>
   )
 }

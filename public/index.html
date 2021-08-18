@@ -12,9 +12,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="https://arc.js.org/icon.png" />
   
-   <link rel="preconnect" href="https://fonts.gstatic.com"/> 
+   <!-- <link rel="preconnect" href="https://fonts.gstatic.com"/> 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,600&display=swap" rel="stylesheet"/>  
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/> -->
+
+
+ <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<!------ Include the above in your HEAD tag ---------->
+
+<style>
+/* .content {
+  padding: 16px;
+} */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  right:0px;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+</style>
+
 </head>
 <body>
 
@@ -22,4 +47,19 @@
   <!-- JS file will be automatically added here by html-webpack-plugin -->
 
 </body>
+
+<script>
+      // window.onscroll = function() {myFunction()};
+
+      // var navbar = document.getElementById("navbar");
+      // var sticky = navbar.offsetTop;
+
+      // function myFunction() {
+      //   if (window.pageYOffset >= sticky) {
+      //     navbar.classList.add("sticky")
+      //   } else {
+      //     navbar.classList.remove("sticky");
+      //   }
+      // }
+</script>
 </html>

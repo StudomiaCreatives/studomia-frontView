@@ -90,9 +90,7 @@ const StyledReactModal = styled(({ className, ...props }) => (
   <ModalBox overlayClassName={className} closeTimeoutMS={250} {...props} />
 ))`${overlayStyles}`
 
-const Modal = ({
-  children, title, closeable, onClose, ...props
-}) => {
+const Modal = ({children, title, closeable, onClose, ...props}) => {
   const { reverse } = props
   const hasHeader = title || closeable
   return (

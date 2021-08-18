@@ -33,6 +33,9 @@ const styles = css`
   transition: background-color 250ms ease-out, color 250ms ease-out, border-color 250ms ease-out;
   background-color: ${backgroundColor};
   color: ${foregroundColor};
+  
+  border-radius: 1.5rem;/* newly added */
+  width:10%; /* newly added */
 
   &:hover, &:focus, &:active {
     background-color: ${hoverBackgroundColor};
@@ -44,10 +47,7 @@ const styles = css`
   }
 `
 
-const StyledLink = styled(({
-  disabled, transparent, reverse, palette, height, theme, ...props
-}) => <Link {...props} />)`${styles}`
-
+const StyledLink = styled(({disabled, transparent, reverse, palette, height, theme, ...props}) => <Link {...props} />)`${styles}`
 const Anchor = styled.a`${styles}`
 const StyledButton = styled.button`${styles}`
 

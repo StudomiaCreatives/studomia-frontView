@@ -41,7 +41,7 @@ const Input = ({ ...props }) => {
   } if (type === 'select') {
     return <StyledSelect {...props} />
   }
-  return <StyledInput {...props} />
+  return <StyledInput {...props}  />
 }
 
 Input.propTypes = {

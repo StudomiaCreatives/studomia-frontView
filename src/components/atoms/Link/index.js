@@ -11,7 +11,7 @@ const styles = css`
   color: ${palette({ grayscale: 0 }, 1)};
 
   &:hover {
-  //  text-decoration: underline;
+  /* text-decoration: underline;*/
   }
 `
 

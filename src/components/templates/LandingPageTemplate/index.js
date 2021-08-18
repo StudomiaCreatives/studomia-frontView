@@ -14,6 +14,17 @@ const Wrapper = styled.div`
   @media screen and (max-width: 640px) {
     padding-top: 3.25rem;
   }
+
+	position: absolute;
+	width: 1440px;
+	height: 4970px;
+	background-color: rgba(255,255,255,1);
+	overflow: hidden;
+	--web-view-name: New Tutors page Studomia- landing Page ;
+	--web-view-id: New_Tutors_page_Studomia-_landing_Page_;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+
 `
 const Header = styled.header`
  position: relative;
